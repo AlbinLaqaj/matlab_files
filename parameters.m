@@ -9,8 +9,8 @@ l = 0.06; % Abstand Verbindugslinie und COM Chassis, [l] = m
 t = 0.03; % Dicke des Chassis, [t] = m
 b = 0.11; % Breite Chassis, [b] = m
 g = 9.81; % Erdbeschleunigung, [g] = m/s^2
-d = 0.05; % Viskoser Dämpfungskoeffizient Räder/Tisch (glatt), [d] = N·s/m
-c = 0.05; % Dämpfung zwischen Chassis, [c] = N·m·s/rad
+d = 0.5; % Viskoser Dämpfungskoeffizient Räder/Tisch (glatt), [d] = N·s/m
+c = 0.5; % Dämpfung zwischen Chassis, [c] = N·m·s/rad
 I = M/12*(t^2+b^2) + M*l^2; % Massenträgheit Chassis, [I] = kg*m^2
 J = 1/2*m*r^2; % Massenträgheit Rad, [J] = kg*m^2
 
