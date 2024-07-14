@@ -15,7 +15,7 @@ I = M/12*(t^2+b^2) + M*l^2; % Massenträgheit Chassis, [I] = kg*m^2
 J = 1/2*m*r^2; % Massenträgheit Rad, [J] = kg*m^2
 
 % Motorparameter
-U1 = 0; % Motorspannung, [U1] = V %trd
+U1 = 0; % Motorspannung, [U1] = V
 U2 = 0; % Motorspannung, [U2] = V
 N = 50; % Übersetzungsverhältnis, [N] = 1
 R = 0.5; % Ankerwiderstand, [Ra] = Ohm
