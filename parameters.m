@@ -4,7 +4,7 @@ global r m M l t g d c Km R I J
 % Räder- und Chassis-Parameter
 r = 0.044; % Radius Rad, [r] = m
 m = 0.03; % m_rad = 0,02 + m_d = 0,01, [m] = kg
-M = 0.5 - m; % Masse Chassis, [M] = kg
+M = 300.3; % Masse Chassis, [M] = kg
 l = 0.06; % Abstand Verbindugslinie und COM Chassis, [l] = m
 t = 0.03; % Dicke des Chassis, [t] = m
 b = 0.11; % Breite Chassis, [b] = m
