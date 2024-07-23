@@ -3,19 +3,19 @@ function MM = M_matrix(q)
     global r m M l I J
 
     % Variablen aus q extrahieren
-    phi1 = q(1);
-    phi2 = q(2);
     theta = q(3);
 
+    % Initialisiere eine 3x3-Matrix
+    MM = zeros(3,3);
+
     % Elemente der M(q)-Matrix berechnen
-    MM = zeros(3,3); % Initialisiere eine 3x3-Matrix
-    MM(1,1) = m*r^2 + J + (1/4)*M*r^2;
-    MM(1,2) = (1/4)*M*r^2;
-    MM(1,3) = (1/2)*M*l*cos(theta);
-    MM(2,1) = (1/4)*M*r^2;
-    MM(2,2) = m*r^2 + J + (1/4)*M*r^2;
-    MM(2,3) = (1/2)*M*l*cos(theta);
-    MM(3,1) = (1/2)*M*l*cos(theta);
-    MM(3,2) = (1/2)*M*l*cos(theta);
-    MM(3,3) = M*l^2+I;
+    MM(1,1) = r^2*(1/4*M + m) + J;
+    MM(1,2) = 1/4*M*r^2;
+    MM(1,3) = r^2*(1/2*M + m) + J + 1/2*M*l*r*cos(theta);
+    MM(2,1) = 1/4*M*r^2;
+    MM(2,2) = r^2*(1/4*M + m) + J;
+    MM(2,3) = r^2*(1/2*M + m) + J + 1/2*M*l*r*cos(theta);
+    MM(3,1) = r^2*(1/2*M + m) + J + 1/2*M*l*r*cos(theta);
+    MM(3,2) = r^2*(1/2*M + m) + J + 1/2*M*l*r*cos(theta);
+    MM(3,3) = r^2*(M + 2*m) + 2*J + 2*M*l*r*cos(theta) + M*l^2 + I;
 end

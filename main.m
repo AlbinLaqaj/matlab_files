@@ -8,7 +8,7 @@
 
     parameters();
 
-    init_angles = [0;0;0.1];
+    init_angles = [0;0;170/180*pi];
     init_dangles = [0;0;0];
 
 %% Run simulation 

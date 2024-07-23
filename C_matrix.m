@@ -1,12 +1,16 @@
-function CM = C_matrix(q, q_dot)
+function CM = C_matrix(in)
     % Globale Parameter deklarieren
     global r M l
 
-    % Variablen aus q und q_dot extrahieren
-    theta = q(3);
-    theta_dot = q_dot(3);
+    % Variablen aus in = [q q_dot] extrahieren
+    theta = in(3);
+    theta_dot = in(6);
+
+    % Initialisiere eine 3x3-Matrix
+    CM = zeros(3,3); 
 
     % Elemente der C(q, q_dot)-Matrix berechnen
-    CM = zeros(3,3); % Initialisiere eine 3x3-Matrix
-    CM(:,3) = -(1/2)*M*l*r*theta_dot*sin(theta) * [1; 1; 0];
+    CM(1,3) = -1/2*M*l*r*theta_dot*sin(theta);
+    CM(2,3) = -1/2*M*l*r*theta_dot*sin(theta);
+    CM(2,3) = -M*l*r*theta_dot*sin(theta);
 end
