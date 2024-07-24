@@ -12,8 +12,8 @@ b = 0.11; % Messwert, Breite Chassis, [b] = m
 g = 9.81; % Erdbeschleunigung, [g] = m/s^2
 I = M/12*(t^2 + b^2) + M*l^2; % Massenträgheit Chassis, [I] = kg*m^2
 J = 1/2*m*r^2; % Massenträgheit Rad, [J] = kg*m^2
-d = 0.5; % Schätzung
-c = 0.5; % Schätzung
+d = 0.005; % Schätzung
+c = 0.005; % Schätzung
 
 %% Input
 
