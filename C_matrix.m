@@ -12,5 +12,5 @@ function CM = C_matrix(in)
     % Elemente der C(q, q_dot)-Matrix berechnen
     CM(1,3) = -1/2*M*l*r*theta_dot*sin(theta);
     CM(2,3) = -1/2*M*l*r*theta_dot*sin(theta);
-    CM(2,3) = -M*l*r*theta_dot*sin(theta);
+    CM(3,3) = -M*l*r*theta_dot*sin(theta);
 end
