@@ -5,9 +5,6 @@ function MM = M_matrix(q)
     % Variablen aus q extrahieren
     theta = q(3);
 
-    % Initialisiere eine 3x3-Matrix
-    MM = zeros(3,3);
-
     % Elemente der M(q)-Matrix berechnen
     MM(1,1) = r^2*(1/4*M + m) + J;
     MM(1,2) = 1/4*M*r^2;
