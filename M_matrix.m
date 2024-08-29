@@ -1,11 +1,12 @@
 function MM = M_matrix(q)
-    % Globale Parameter deklarieren
+
+    % global parameters
     global r m M l I J
 
-    % Variablen aus q extrahieren
+    % extract variables from q
     theta = q(3);
 
-    % Elemente der M(q)-Matrix berechnen
+    % Calculate the elements of the M(q) matrix
     MM(1,1) = r^2*(1/4*M + m) + J;
     MM(1,2) = 1/4*M*r^2;
     MM(1,3) = r^2*(1/2*M + m) + J + 1/2*M*l*r*cos(theta);

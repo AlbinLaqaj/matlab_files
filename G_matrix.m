@@ -1,10 +1,11 @@
 function GM = G_matrix(q)
-    % Globale Parameter deklarieren
+
+    % global parameters
     global M g l
 
-    % Variablen aus q extrahieren
+    % extract variables from q
     theta = q(3);
 
-    % Elemente der G(q)-Matrix berechnen
+    % Calculate the elements of the G(q) matrix
     GM = [0; 0; -M*g*l*sin(theta)];
 end
