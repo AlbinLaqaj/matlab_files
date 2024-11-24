@@ -12,7 +12,7 @@ b = 0.105; % Breite Chassis, [b] = m
 g = 9.81; % Erdbeschleunigung, [g] = m/s^2
 I = M/12*(t^2 + b^2) + M*l^2; % Massenträgheit Chassis, [I] = kg*m^2
 J = 1/2*m*r^2; % Massenträgheit Rad, [J] = kg*m^2
-d = 0.000; % keine Begründung, Reibung zw Räder und Boden
+d = 0.005; % keine Begründung, Reibung zw Räder und Boden
 c = 0.005; % Reibung zw Chassis und dc
 
 
