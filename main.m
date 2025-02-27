@@ -34,22 +34,20 @@ tf_MS = minreal(tf(sys_MS));
 isControllable = rank(ctrb(sys_MS)) == size(A, 2);
 isObservable = rank(obsv(sys_MS)) == size(A, 2);
 
-sim('Plant.slx');
+% sim('Plant.slx');
 
 % plot_openLoop_theta();
-% exportgraphics(gcf, ['C:\Users\albin\OneDrive - Technische Universität Berlin\' ...
-    % 'Studium\Bachelor_thesis\Bilder\plot_theta_openLoop.pdf'], 'ContentType', 'vector');
 %% Controler
 
 % analyze open loop
 [zeros_MS, poles_MS, gains_MS] = zpkdata(tf_MS);
 
-% PID-controler
+% PID-controler, SBR
 Kp = -27;
 Ki = -25;
 Kd = -1;
 
-% % PID-controler
+% % PID-controler, extended SBR
 % Kp = -34;
 % Ki = -45;
 % Kd = -1.2;
@@ -77,7 +75,7 @@ x_Luenb = run_luenberger_observer(theta_IMU, dtheta_IMU, t_sample);
 % Kalman Filter estimates
 x_Kalm = run_kalman_filter(theta_IMU, dtheta_IMU, t_sample);
 
-plot_observer(theta_IMU, dtheta_IMU, x_Luenb, x_Kalm);
+% plot_observer(theta_IMU, dtheta_IMU, x_Luenb, x_Kalm);
 % plot_measurements(theta_IMU, dtheta_IMU);
 
 % pole_placement_Luenberger(theta_IMU, dtheta_IMU, t_sample);
